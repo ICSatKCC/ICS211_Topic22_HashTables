@@ -1,31 +1,36 @@
 package hashtables;
+import linkedlists.*;
 /** Implementation of a hash table using chaining for collision resolution.
  * @author Lisa Miller
  * @since 11/13/2025
  */
-public class HashTableChaining implements HashTable<K, V> {
+public class HashTableChaining<V> implements HashTable<V> {
     // Implementation details would go here
+    SingleLinkedList<HashTableEntry<V>>[] table;
+    int capacity;
+    int size; 
+
 
     @Override
-    public V put(K key, V value) {
+    public V put(V value) {
         // Implementation of put method
         return null;
     }
 
     @Override
-    public V get(K key) {
+    public V get(V value) {
         // Implementation of get method
         return null;
     }
 
     @Override
-    public V remove(K key) {
+    public V remove(V value) {
         // Implementation of remove method
         return null;
     }
 
     @Override
-    public boolean containsKey(K key) {
+    public boolean contains(V value) {
         // Implementation of containsKey method
         return false;
     }

@@ -3,45 +3,44 @@ package hashtables;
  * @author Lisa Miller
  * @since 11/13/2025
  */
-public interface HashTable<K, V> {
+public interface HashTable<V> {
     
     /**
-     * Associates the specified value with the specified key in this hash table.
-     * @param key the key with which the specified value is to be associated
-     * @param value the value to be associated with the specified key
-     * @return the previous value associated with key, or null if there was no mapping
+     * Adds a value to the hash table.
+     * @param value the value to be added
+     * @return 
      */
-    V put(K key, V value);
+    V put(V value);
     
     /**
      * Returns the value to which the specified key is mapped.
-     * @param key the key whose associated value is to be returned
+     * @param value the value whose associated value is to be returned
      * @return the value associated with the key, or null if no mapping exists
      */
-    V get(K key);
+    V get(V value);
     
     /**
      * Removes the mapping for a key from this hash table if it is present.
-     * @param key the key whose mapping is to be removed
+     * @param value
      * @return the previous value associated with key, or null if there was no mapping
      */
-    V remove(K key);
+    V remove(V value);
     
     /**
      * Returns true if this hash table contains a mapping for the specified key.
-     * @param key the key whose presence is to be tested
-     * @return true if this hash table contains a mapping for the specified key
+     * @param value the value whose presence is to be tested
+     * @return true if this hash table contains the value.
      */
-    boolean containsKey(K key);
+    boolean contains(V value);
     
     /**
-     * Returns the number of key-value mappings in this hash table.
-     * @return the number of key-value mappings
+     * Returns the number of mappings in this hash table.
+     * @return the number of mappings
      */
     int size();
     
     /**
-     * Returns true if this hash table contains no key-value mappings.
+     * Returns true if this hash table contains no mappings.
      * @return true if this hash table contains no mappings
      */
     boolean isEmpty();
