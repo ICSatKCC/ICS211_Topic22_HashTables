@@ -61,6 +61,7 @@ venv/
 *.war
 *.ear
 /target/
+/target/classes/
 
 # Gradle
 .gradle/
@@ -95,3 +96,5 @@ docker-compose.override.yml
 # System files
 ehthumbs.db
 Icon?
+target/classes/hashtables/HashTableChaining.class
+target/classes/hashtables/HashTableEntry.class
