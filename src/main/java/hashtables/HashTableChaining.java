@@ -10,6 +10,19 @@ public class HashTableChaining<V> implements HashTable<V> {
     int capacity;
     int size; 
 
+    /**
+     * Constructor to create a hash table with the specified capacity.
+     * @param capacity the number of buckets in the hash table
+     */
+    @SuppressWarnings("unchecked")
+    public HashTableChaining(int capacity) {
+        this.capacity = capacity;
+        this.size = 0;
+        table = new SingleLinkedList[capacity];
+        for (int i = 0; i < capacity; i++) {
+            table[i] = new SingleLinkedList<HashTableEntry<V>>();
+        }
+    }
 
     @Override
     public V put(V value) {
