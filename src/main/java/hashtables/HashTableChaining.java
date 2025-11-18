@@ -43,12 +43,6 @@ public class HashTableChaining<V> implements HashTable<V> {
     }
 
     @Override
-    public boolean contains(V value) {
-        // Implementation of containsKey method
-        return false;
-    }
-
-    @Override
     public int size() {
         // Implementation of size method
         return 0;
@@ -65,4 +59,9 @@ public class HashTableChaining<V> implements HashTable<V> {
         // Implementation of clear method
     }
 
+    @Override
+    public String toString() {
+        // Implementation of toString method
+        return null;
+}
 }

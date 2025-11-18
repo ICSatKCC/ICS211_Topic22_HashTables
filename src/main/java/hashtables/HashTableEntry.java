@@ -13,7 +13,7 @@ public class HashTableEntry<V> {
      * @param value the value to be stored in the entry
      */ 
     public HashTableEntry(V value) {
-        this.key = value.hashCode();
+        this.key = Math.abs(value.hashCode());
         this.value = value;
     }
     /** Getter for the key.
@@ -35,5 +35,12 @@ public class HashTableEntry<V> {
      */     
     public void setValue(V value) {
         this.value = value;
+    }
+    /** Returns a string representation of the hash table entry.
+     * @return a string representation of the entry
+     */
+    @Override
+    public String toString() {
+        return value.toString();
     }
 }
